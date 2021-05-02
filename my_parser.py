@@ -334,6 +334,7 @@ class Lr1Parser:
                     root = self.node_stack[-1]
                     self.tree = SyntaxTree(root)
                     return True
+        return False
 
     def make_leaf(self, symbol, row):
         if symbol == 'Program':
