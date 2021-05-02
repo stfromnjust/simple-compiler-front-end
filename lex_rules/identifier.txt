@@ -1,0 +1,6 @@
+[identifier]->'letter'
+[identifier]->'letter'"letter_digit"
+"letter_digit"->'letter'
+"letter_digit"->'digit'
+"letter_digit"->'letter'"letter_digit"
+"letter_digit"->'digit'"letter_digit"

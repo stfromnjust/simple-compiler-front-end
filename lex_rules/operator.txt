@@ -1,0 +1,17 @@
+[operator]->'='
+[operator]->'<'
+[operator]->'>'
+[operator]->'+'
+[operator]->'-'
+[operator]->'*'
+[operator]->'/'
+[operator]->'!'
+"equal"->'='
+[operator]->'<'"equal"
+[operator]->'>'"equal"
+[operator]->'='"equal"
+[operator]->'!'"equal"
+"and"->'&'
+[operator]->'&'"and"
+"or"->'|'
+[operator]->'|'"or"

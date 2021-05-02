@@ -1,0 +1,8 @@
+[delimiter]->';'
+[delimiter]->','
+[delimiter]->'('
+[delimiter]->')'
+[delimiter]->'{'
+[delimiter]->'}'
+[delimiter]->'['
+[delimiter]->']'

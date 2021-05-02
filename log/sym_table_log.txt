@@ -1,0 +1,13 @@
+{
+level: 0; index: 0
+['a', '_T1']
+}
+
+********************
+out:
+{(0, 0): -1}
+level 0: 
+dict 0: 
+{'a': Symbol(type: int), '_T1': Symbol(type: float)}
+
+

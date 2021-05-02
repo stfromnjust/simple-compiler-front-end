@@ -1,0 +1,100 @@
+state_stack deque(['0'])
+**********
+symbol_stack deque(['#'])
+**********
+state_stack deque(['0', '2'])
+**********
+symbol_stack deque(['#', '{'])
+**********
+state_stack deque(['0', '2', '5'])
+**********
+symbol_stack deque(['#', '{', 'Decls'])
+**********
+state_stack deque(['0', '2', '5', '11'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'int'])
+**********
+state_stack deque(['0', '2', '5', '9'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Type'])
+**********
+state_stack deque(['0', '2', '5', '9', '22'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Type', 'a'])
+**********
+state_stack deque(['0', '2', '5', '9', '22', '28'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Type', 'a', ';'])
+**********
+state_stack deque(['0', '2', '5', '10'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Decl'])
+**********
+state_stack deque(['0', '2', '5'])
+**********
+symbol_stack deque(['#', '{', 'Decls'])
+**********
+state_stack deque(['0', '2', '5', '11'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'int'])
+**********
+state_stack deque(['0', '2', '5', '9'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Type'])
+**********
+state_stack deque(['0', '2', '5', '9', '22'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Type', 'a'])
+**********
+state_stack deque(['0', '2', '5', '9', '22', '28'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Type', 'a', ';'])
+**********
+state_stack deque(['0', '2', '5', '10'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Decl'])
+**********
+state_stack deque(['0', '2', '5'])
+**********
+symbol_stack deque(['#', '{', 'Decls'])
+**********
+state_stack deque(['0', '2', '5', '11'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'int'])
+**********
+state_stack deque(['0', '2', '5', '9'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Type'])
+**********
+state_stack deque(['0', '2', '5', '9', '22'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Type', 'b'])
+**********
+state_stack deque(['0', '2', '5', '9', '22', '28'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Type', 'b', ';'])
+**********
+state_stack deque(['0', '2', '5', '10'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Decl'])
+**********
+state_stack deque(['0', '2', '5'])
+**********
+symbol_stack deque(['#', '{', 'Decls'])
+**********
+state_stack deque(['0', '2', '5', '7'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts'])
+**********
+state_stack deque(['0', '2', '5', '7', '15'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', '}'])
+**********
+state_stack deque(['0', '1'])
+**********
+symbol_stack deque(['#', 'Block'])
+**********
+state_stack deque(['0', '3'])
+**********
+symbol_stack deque(['#', 'Program'])
+**********
