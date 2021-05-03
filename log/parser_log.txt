@@ -44,30 +44,6 @@ symbol_stack deque(['#', '{', 'Decls', 'Type'])
 **********
 state_stack deque(['0', '2', '5', '9', '22'])
 **********
-symbol_stack deque(['#', '{', 'Decls', 'Type', 'a'])
-**********
-state_stack deque(['0', '2', '5', '9', '22', '28'])
-**********
-symbol_stack deque(['#', '{', 'Decls', 'Type', 'a', ';'])
-**********
-state_stack deque(['0', '2', '5', '10'])
-**********
-symbol_stack deque(['#', '{', 'Decls', 'Decl'])
-**********
-state_stack deque(['0', '2', '5'])
-**********
-symbol_stack deque(['#', '{', 'Decls'])
-**********
-state_stack deque(['0', '2', '5', '11'])
-**********
-symbol_stack deque(['#', '{', 'Decls', 'int'])
-**********
-state_stack deque(['0', '2', '5', '9'])
-**********
-symbol_stack deque(['#', '{', 'Decls', 'Type'])
-**********
-state_stack deque(['0', '2', '5', '9', '22'])
-**********
 symbol_stack deque(['#', '{', 'Decls', 'Type', 'b'])
 **********
 state_stack deque(['0', '2', '5', '9', '22', '28'])
@@ -81,6 +57,218 @@ symbol_stack deque(['#', '{', 'Decls', 'Decl'])
 state_stack deque(['0', '2', '5'])
 **********
 symbol_stack deque(['#', '{', 'Decls'])
+**********
+state_stack deque(['0', '2', '5', '7'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts'])
+**********
+state_stack deque(['0', '2', '5', '7', '14'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '('])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '54'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'a'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '49'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Loc'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '56'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Factor'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '52'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Unary'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '45'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Term'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '51'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Expr'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '60'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Rel'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '50'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Equality'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '50', '85'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Equality', '=='])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '50', '85', '53'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Equality', '==', '0'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '50', '85', '56'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Equality', '==', 'Factor'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '50', '85', '52'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Equality', '==', 'Unary'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '50', '85', '45'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Equality', '==', 'Term'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '50', '85', '51'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Equality', '==', 'Expr'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '50', '85', '127'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Equality', '==', 'Rel'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '50'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Equality'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '57'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Join'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '8'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'bool'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '9'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Type'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '9', '22'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Type', 'b'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '9', '22', '28'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Type', 'b', ';'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '10'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Decl'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '19'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'b'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '='])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '43'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', '!'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '43', '38'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', '!', 'b'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '43', '33'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', '!', 'Loc'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '43', '40'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', '!', 'Factor'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '43', '79'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', '!', 'Unary'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '36'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', 'Unary'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '29'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', 'Term'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '35'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', 'Expr'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '44'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', 'Rel'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '34'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', 'Equality'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '41'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', 'Join'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '39'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', 'Bool'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '13', '23', '39', '76'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Loc', '=', 'Bool', ';'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '17'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', 'Stmt'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '18', '26', '62', '97'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', '{', 'Decls', 'Stmts', '}'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '20'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', 'Block'])
+**********
+state_stack deque(['0', '2', '5', '7', '14', '24', '55', '93', '146'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'if1', '(', 'Bool', ')', 'Stmt'])
+**********
+state_stack deque(['0', '2', '5', '7', '17'])
+**********
+symbol_stack deque(['#', '{', 'Decls', 'Stmts', 'Stmt'])
 **********
 state_stack deque(['0', '2', '5', '7'])
 **********

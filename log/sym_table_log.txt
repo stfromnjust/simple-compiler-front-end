@@ -1,13 +1,21 @@
 {
 level: 0; index: 0
-['a', '_T1']
+['a', 'b', '_T1']
+	{
+	level: 1; index: 0
+	['b', '_T2']
+	}
 }
 
 ********************
 out:
-{(0, 0): -1}
+{(0, 0): -1, (1, 0): 0}
 level 0: 
 dict 0: 
-{'a': Symbol(type: int), '_T1': Symbol(type: float)}
+{'a': Symbol(type: int), 'b': Symbol(type: int), '_T1': Symbol(type: bool)}
+
+level 1: 
+dict 0: 
+{'b': Symbol(type: bool), '_T2': Symbol(type: bool)}
 
 

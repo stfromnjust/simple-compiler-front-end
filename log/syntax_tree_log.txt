@@ -1,0 +1,150 @@
+ SyntaxTreeNode 74:     ProgramNode|  row -1| 
+
+	 SyntaxTreeNode 73:     BlockNode|  row -1| 
+
+		 SyntaxTreeNode 72:     NormNode    val: {|  row -1| 
+
+		 SyntaxTreeNode 13:     DeclsNode|  row 3| 
+
+			 SyntaxTreeNode 7:     DeclsNode|  row 2| 
+
+				 SyntaxTreeNode 1:     DeclsNode|  row 2| 
+
+					 SyntaxTreeNode 0:     NormNode    val: |  row 2| 
+
+				 SyntaxTreeNode 6:     DeclNode|  row 2| 
+
+					 SyntaxTreeNode 3:     NormNode    val: Type|  row 2| 
+
+						 SyntaxTreeNode 2:     NormNode    val: int|  row 2| 
+
+					 SyntaxTreeNode 5:     NormNode    val: a|  row 2| 
+
+					 SyntaxTreeNode 4:     NormNode    val: ;|  row 2| 
+
+			 SyntaxTreeNode 12:     DeclNode|  row 3| 
+
+				 SyntaxTreeNode 9:     NormNode    val: Type|  row 2| 
+
+					 SyntaxTreeNode 8:     NormNode    val: int|  row 2| 
+
+				 SyntaxTreeNode 11:     NormNode    val: b|  row 3| 
+
+				 SyntaxTreeNode 10:     NormNode    val: ;|  row 3| 
+
+		 SyntaxTreeNode 70:     StmtsNode|  row 8| 
+
+			 SyntaxTreeNode 15:     StmtsNode|  row 3| 
+
+				 SyntaxTreeNode 14:     NormNode    val: |  row 3| 
+
+			 SyntaxTreeNode 69:     StmtNode|  row 8| 
+
+				 SyntaxTreeNode 68:     NormNode    val: if1|  row 8| 
+
+				 SyntaxTreeNode 67:     NormNode    val: (|  row 8| 
+
+				 SyntaxTreeNode 33:     BoolNode|  row 3| 
+
+					 SyntaxTreeNode 32:     JoinNode|  row 3| 
+
+						 SyntaxTreeNode 31:     EqualityNode|  row 3| 
+
+							 SyntaxTreeNode 23:     EqualityNode|  row 3| 
+
+								 SyntaxTreeNode 22:     RelNode|  row 3| 
+
+									 SyntaxTreeNode 21:     ExprNode|  row 3| 
+
+										 SyntaxTreeNode 20:     TermNode|  row 3| 
+
+											 SyntaxTreeNode 19:     UnaryNode|  row 3| 
+
+												 SyntaxTreeNode 18:     FactorNode|  row 3| 
+
+													 SyntaxTreeNode 17:     LocNode|  row 3| 
+
+														 SyntaxTreeNode 16:     NormNode    val: a|  row 3| 
+
+							 SyntaxTreeNode 30:     NormNode    val: ==|  row 3| 
+
+							 SyntaxTreeNode 29:     RelNode|  row 3| 
+
+								 SyntaxTreeNode 28:     ExprNode|  row 3| 
+
+									 SyntaxTreeNode 27:     TermNode|  row 3| 
+
+										 SyntaxTreeNode 26:     UnaryNode|  row 3| 
+
+											 SyntaxTreeNode 25:     FactorNode|  row 3| 
+
+												 SyntaxTreeNode 24:     NormNode    val: 0|  row 3| 
+
+				 SyntaxTreeNode 66:     NormNode    val: )|  row 8| 
+
+				 SyntaxTreeNode 65:     StmtNode|  row 8| 
+
+					 SyntaxTreeNode 64:     BlockNode|  row 8| 
+
+						 SyntaxTreeNode 63:     NormNode    val: {|  row 8| 
+
+						 SyntaxTreeNode 41:     DeclsNode|  row 6| 
+
+							 SyntaxTreeNode 35:     DeclsNode|  row 5| 
+
+								 SyntaxTreeNode 34:     NormNode    val: |  row 5| 
+
+							 SyntaxTreeNode 40:     DeclNode|  row 6| 
+
+								 SyntaxTreeNode 37:     NormNode    val: Type|  row 5| 
+
+									 SyntaxTreeNode 36:     NormNode    val: bool|  row 5| 
+
+								 SyntaxTreeNode 39:     NormNode    val: b|  row 6| 
+
+								 SyntaxTreeNode 38:     NormNode    val: ;|  row 6| 
+
+						 SyntaxTreeNode 61:     StmtsNode|  row 7| 
+
+							 SyntaxTreeNode 43:     StmtsNode|  row 6| 
+
+								 SyntaxTreeNode 42:     NormNode    val: |  row 6| 
+
+							 SyntaxTreeNode 60:     StmtNode|  row 7| 
+
+								 SyntaxTreeNode 45:     LocNode|  row 6| 
+
+									 SyntaxTreeNode 44:     NormNode    val: b|  row 6| 
+
+								 SyntaxTreeNode 59:     NormNode    val: =|  row 7| 
+
+								 SyntaxTreeNode 57:     BoolNode|  row 6| 
+
+									 SyntaxTreeNode 56:     JoinNode|  row 6| 
+
+										 SyntaxTreeNode 55:     EqualityNode|  row 6| 
+
+											 SyntaxTreeNode 54:     RelNode|  row 6| 
+
+												 SyntaxTreeNode 53:     ExprNode|  row 6| 
+
+													 SyntaxTreeNode 52:     TermNode|  row 6| 
+
+														 SyntaxTreeNode 51:     UnaryNode|  row 6| 
+
+															 SyntaxTreeNode 50:     NormNode    val: !|  row 6| 
+
+															 SyntaxTreeNode 49:     UnaryNode|  row 6| 
+
+																 SyntaxTreeNode 48:     FactorNode|  row 6| 
+
+																	 SyntaxTreeNode 47:     LocNode|  row 6| 
+
+																		 SyntaxTreeNode 46:     NormNode    val: b|  row 6| 
+
+								 SyntaxTreeNode 58:     NormNode    val: ;|  row 7| 
+
+						 SyntaxTreeNode 62:     NormNode    val: }|  row 8| 
+
+		 SyntaxTreeNode 71:     NormNode    val: }|  row -1| 
+
