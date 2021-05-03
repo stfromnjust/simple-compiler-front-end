@@ -1,5 +1,18 @@
 [Program]->"Block"
+    {
+        # 继承属性
+        Program.start = 0
+        Block.start = Program.start
+        # 综合属性
+        Program.codelist = Block.codelist
+    }
 "Block"->'{'"Decls""Stmts"'}'
+    {
+        # 继承属性
+        Stmts.start = Block.start
+        # 综合属性
+        Block.codelist = Stmts.codelist
+    }
 "Decls"->"Decls""Decl"
 "Decls"->''
 "Decl"->"Type"'identifier'';'
@@ -7,6 +20,11 @@
 "Type"->'bool'
 "Type"->'float'
 "Stmts"->"Stmts""Stmt"
+    {
+        # 继承属性
+
+        # 综合属性
+    }
 "Stmts"->''
 "Stmt"->"Loc"'='"Bool"';'
 "Stmt"->'if1''('"Bool"')'"Stmt"

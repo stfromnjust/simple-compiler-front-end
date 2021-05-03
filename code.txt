@@ -1,3 +1,8 @@
 {
-    int a; int a; int b;
+    int a; int b;
+    if1 (a == 0)
+    {
+        bool b;
+        b = !b;
+    }
 }
