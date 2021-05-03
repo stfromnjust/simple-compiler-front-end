@@ -1,8 +1,20 @@
 {
-    int a; int b;
-    if1 (a == 0)
-    {
-        bool b;
-        b = !b;
-    }
+   bool a; bool b; bool c;
+   int d; int f;
+   if1 (a && b || c)
+   {
+       a = a + 1;
+   }
+   if2 (d+f<=1)
+   {
+       d = d * f - d * d;
+   }
+   else
+   {
+       f = d * (d + f) + f;
+   }
+   while (!a)
+   {
+       d = a + d;
+   }
 }

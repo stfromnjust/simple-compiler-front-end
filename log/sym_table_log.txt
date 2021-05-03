@@ -1,21 +1,39 @@
 {
 level: 0; index: 0
-['a', 'b', '_T1']
+['a', 'b', 'c', 'd', 'f', '_T1', '_T2', '_T4', '_T5', '_T12']
 	{
 	level: 1; index: 0
-	['b', '_T2']
+	['_T3']
+	}
+	{
+	level: 1; index: 1
+	['_T6', '_T7', '_T8']
+	}
+	{
+	level: 1; index: 2
+	['_T9', '_T10', '_T11']
+	}
+	{
+	level: 1; index: 3
+	['_T13']
 	}
 }
 
 ********************
 out:
-{(0, 0): -1, (1, 0): 0}
+{(0, 0): -1, (1, 0): 0, (1, 1): 0, (1, 2): 0, (1, 3): 0}
 level 0: 
 dict 0: 
-{'a': Symbol(type: int), 'b': Symbol(type: int), '_T1': Symbol(type: bool)}
+{'a': Symbol(type: bool), 'b': Symbol(type: bool), 'c': Symbol(type: bool), 'd': Symbol(type: int), 'f': Symbol(type: int), '_T1': Symbol(type: bool), '_T2': Symbol(type: bool), '_T4': Symbol(type: int), '_T5': Symbol(type: bool), '_T12': Symbol(type: bool)}
 
 level 1: 
 dict 0: 
-{'b': Symbol(type: bool), '_T2': Symbol(type: bool)}
+{'_T3': Symbol(type: float)}
+dict 1: 
+{'_T6': Symbol(type: int), '_T7': Symbol(type: int), '_T8': Symbol(type: int)}
+dict 2: 
+{'_T9': Symbol(type: int), '_T10': Symbol(type: int), '_T11': Symbol(type: int)}
+dict 3: 
+{'_T13': Symbol(type: int)}
 
 
