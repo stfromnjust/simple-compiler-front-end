@@ -8,7 +8,7 @@
 
 ## 2. 运行
 
-* 只需运行main.py即可
+* 只需运行main.py即可, 测试代码在code.txt
 
 * 如需更改文法，请先清除action_goto.json中的内容，再运行main.py，不过可能导致语义分析失败，慎重
 
