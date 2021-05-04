@@ -64,5 +64,3 @@ for code in test1.syn_tree.root.codelist:
 # 打印语法树
 test1.syn_tree.dfs(test1.syn_tree.root)
 # 语义分析
-
-

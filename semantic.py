@@ -344,12 +344,3 @@ class SemanticAnalyzer:
 
     def finish_Factor(self, node: FactorNode):
         node.upward()
-
-
-
-
-
-
-
-
-
