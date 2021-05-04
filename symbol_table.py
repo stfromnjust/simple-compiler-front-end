@@ -58,16 +58,13 @@ class SymbolTable:
 
     def gen_str(self, level, index):
         ret = ''
+        ret += '\t' * level + '{\n'
+        ret += '\t' * level + 'level: ' + str(level) + '; index: ' + str(index) + '\n'
+        ret += '\t' * level + str(list(self.tables[level][index])) + '\n'
         if level == len(self.tables) - 1:
-            ret += '\t' * level + '{\n'
-            ret += '\t' * level + 'level: ' + str(level) + '; index: ' + str(index) + '\n'
-            ret += '\t' * level + str(list(self.tables[level][index])) + '\n'
             ret += '\t' * level + '}\n'
             return ret
         else:
-            ret += '\t' * level + '{\n'
-            ret += '\t' * level + 'level: ' + str(level) + '; index: ' + str(index) + '\n'
-            ret += '\t' * level + str(list(self.tables[level][index])) + '\n'
             for key in self.out.keys():
                 l, i = key
                 prev = self.out[key]
