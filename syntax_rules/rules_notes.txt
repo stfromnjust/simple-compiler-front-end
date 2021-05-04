@@ -1,0 +1,331 @@
+[Program]->"Block"
+    {
+        # 继承属性
+        Block.start = Program.start
+        # 综合属性
+        Program.codelist = Block.codelist
+        Program.start = 0
+    }
+"Block"->'{'"Decls""Stmts"'}'
+    {
+        # 继承属性
+        Stmts.start = Block.start
+        # 综合属性
+        Block.codelist = Stmts.codelist
+    }
+"Decls"->"Decls""Decl"
+"Decls"->''
+"Decl"->"Type"'identifier'';'
+"Type"->"Type"'[''constant'']'
+"Type"->'int'
+"Type"->'bool'
+"Type"->'float'
+"Stmts"->"Stmts""Stmt"
+    {
+        # 继承属性
+        Stmts1.start = Stmts.start
+        # 综合属性
+        Stmt.start = Stmts1.start + len(Stmts1.codelist)
+        # 综合属性
+        Stmts.codelist = Stmts1.codelist + Stmt.codelist
+        backpatch(Stmt.nextlist, Stmts.start + len(Stmts.codelist))
+        Stmts.nextlist = Stmt.nextlist
+    }
+"Stmts"->''
+    {
+        # 综合属性
+        Stmts.codelist = []
+    }
+"Stmt"->"Loc"'='"Bool"';'
+    {   
+        # 继承属性
+        Bool.start = Stmt.start
+        Bool.control = False
+        # 综合属性
+        Stmt.codelist = Bool.codelist + Code(=, Bool.val, _, Loc.val)
+    }
+"Stmt"->'if1''('"Bool"')'"Stmt"
+    {
+        # 继承属性
+        Bool.start = Stmt.start
+        Bool.control = True
+        # 综合属性
+        Stmt1.start = Bool.start + len(Bool.codelist)
+        backpatch(Bool.truelist, Stmt1.start)
+        # 综合属性
+        Stmt.nextlist = Bool.falselist + Stmt1.nextlist
+        Stmt.codelist = Bool.codelist + Stmt1.codelist
+    }
+"Stmt"->'if2''('"Bool"')'"Stmt"'else'"Stmt"
+    {
+        # 继承属性
+        Bool.start = Stmt.start
+        Bool.control = True
+        # 综合属性
+        Stmt1.start = Bool.start + len(Bool.codelist)
+        backpatch(Bool.truelist, Stmt1.start)
+        Stmt2.start = Stmt1.start + len(Stmt1.codelist) + 1
+        backpatch(Bool.falselist, Stmt2.start)
+        # 综合属性
+        Stmt.nextlist = Stmt1.nextlist + Stmt2.nextlist
+        Stmt1.codelist = Stmt1.codelist + code('go_to', _, _, Stmt2.start + len(Stmt2.codelist))
+        Stmt.codelist = Bool.codelist + Stmt1.codelist + Stmt2.codelist
+    }
+"Stmt"->'while''('"Bool"')'"Stmt"
+    {
+        # 继承属性
+        Bool.start = Stmt.start
+        Bool.control = True
+        # 综合属性
+        Stmt1.start = Bool.start + len(Bool.codelist)
+        backpatch(Stmt1.nextlist, Bool.start)
+        backpatch(Bool.truelist, Stmt1.start)
+        # 综合属性
+        Stmt.nextlist = Bool.falselist
+        Stmt1.codelist = Stmt1.codelist + code('go_to', _, _, Bool.start)
+        Stmt.codelist = Bool.codelist + Stmt1.codelist
+    }
+"Stmt"->"Block"
+    {
+        # 继承属性
+        Block.start = Stmt.start
+        # 综合属性
+        Stmt.codelist = Block.codelist
+    }
+"Loc"->'identifier'
+    {
+        # 综合属性
+        Loc.type = id.type 
+        Loc.val = id.val  
+        Loc.level = id.level
+        Loc.index = id.index 
+    }
+"Bool"->"Bool"'||'"Join"
+    {
+
+        # 继承属性
+        Bool1.start = Bool.start
+        Bool1.control = Bool.control
+        Join.control = Bool.control
+        # 综合属性
+        Join.start = Bool1.start + len(Bool1.codelist)
+            # 控制
+            backpatch(Bool1.falselist, Join.start)
+        # 综合属性
+        Bool.val = new_val
+        Bool.type = 'bool'
+        Bool.level = new_level
+        Bool.index = new_index
+            # 控制
+            Bool.truelist = Bool1.truelist + Join.truelist
+            Bool.falselist = Join.falselist
+            Bool.codelist = Bool1.codelist + Join.codelist
+            # 非控制
+            Bool.codelist = Bool1.codelist + Join.codelist + code(||, Bool1.val, Join.val, Bool.val)
+    }
+"Bool"->"Join"
+    {
+        # 继承属性
+        Join.start = Bool.start
+        Join.control = Bool.control
+        # 综合属性
+        Bool.type = Join.type   
+        Bool.val = Join.val 
+        Bool.level = Join.level
+        Bool.index = Join.index 
+        Bool.codelist = Join.codelist
+            # 控制
+            Bool.truelist = Join.truelist
+            Bool.falselist = Join.falselist
+    }
+"Join"->"Join"'&&'"Equality"
+    {
+        # 继承属性
+        Join1.start = Join.start
+        Join1.control = Join.control
+        Equality.control = Join.control
+        # 综合属性
+        Equality.start = Join1.start + len(Join1.codelist)
+            # 控制
+            backpatch(Join1.truelist, Equality.start)
+        # 综合属性
+        Join.val = new_val
+        Join.type = 'bool'
+        Join.level = new_level
+        Join.index = new_index
+            # 控制
+            Join.falselist = Join1.falselist + Equality.falselist
+            Join.truelist = Equality.truelist
+            Join.codelist = Join1.codelist + Equality.codelist
+            # 非控制
+            Join.codelist = Join1.codelist + Equality.codelist + code(&&, Join1.val, Equality.val, Join.val)
+    }
+"Join"->"Equality"
+    {
+        # 继承属性
+        Equality.start = Join.start
+        Equality.control = Join.control
+        # 综合属性
+        Join.codelist = Equality.codelist
+        Join.val = Equality.val
+        Join.type = Equality.type
+        Join.level = Equality.level
+        Join.index = Equality.index
+            # 控制
+            Join.truelist = Equality.truelist
+            Join.falselist = Equality.falselist
+                # Equality.control
+                Equality.truelist = [Equality.start + len(Equality.codelist)]
+                Equality.falselist = [Equality.start + len(Equality.codelist) + 1]
+                Equality.codelist += code('if_true_go_to', Equality.val, _, -1)
+                Equality.codelist += code('goto', _, _, -1)
+    }
+"Equality"->"Equality"'=='"Rel"
+"Equality"->"Equality"'!='"Rel"
+    {
+        # 继承属性
+        Equality1.start = Equality.start
+        Equality.control = False
+        # 综合属性
+        Rel.start = Equality1.start + len(Equality1.codelist)
+        # 综合属性
+        Equality.val = new_val
+        Equality.type = 'bool'
+        Equality.codelist = Equality1.codelist + Rel.codelist + (op, Equality1.val, Rel.val, Equality.val)
+        Equality.level = new_level
+        Equality.index = new_index
+    }
+"Equality"->"Rel"
+    {
+        # 继承属性
+        Rel.start = Equality.start
+        # 综合属性
+        Equality.codelist = Rel.codelist
+        Equality.val = Rel.val
+        Equality.type = Rel.type
+        Equality.level = Rel.level
+        Equality.index = Rel.index
+    }
+"Rel"->"Expr"'<'"Expr"
+"Rel"->"Expr"'<='"Expr"
+"Rel"->"Expr"'>'"Expr"
+"Rel"->"Expr"'>='"Expr"
+    {
+        # 继承属性
+        Expr1.start = Rel.start
+        # 综合属性
+        Expr2.start = Expr1.start + len(Expr1.codelist)
+        # 综合属性
+        Rel.val = new_val
+        Rel.type = 'bool'
+        Rel.codelist = Expr1.codelist + Expr2.codelist + (op, Expr1.val, Expr2.val, Rel.val)
+        Rel.level = new_level
+        Rel.index = new_index
+    }
+"Rel"->"Expr"
+    {
+        # 继承属性
+        Expr.start = Rel.start
+        # 综合属性
+        Rel.codelist = Expr.codelist
+        Rel.val = Expr.val
+        Rel.type = Expr.type
+        Rel.level = Expr.level
+        Rel.index = Expr.index
+    }
+"Expr"->"Expr"'+'"Term"
+"Expr"->"Expr"'-'"Term"
+    {
+        # 继承属性
+        Expr1.start = Expr.start
+        # 综合属性
+        Term.start = Expr1.start + len(Expr1.codelist)
+        # 综合属性
+        Expr.val = new_val 
+        Expr.type = res_type(Expr1.type, Term.type) 
+        Expr.codelist = Expr1.codelist + Term.codelist + Code(+/-, Expr1.val, Term.val, Expr.val)
+        Expr.level = new_level  
+        Expr.index = new_index 
+    }
+"Expr"->"Term"
+    {
+        # 继承属性
+        Term.start = Expr.start
+        # 综合属性
+        Expr.codelist = Term.codelist
+        Expr.val = Term.val
+        Expr.type = Term.type
+        Expr.level = Term.level
+        Expr.index = Term.index
+    }
+"Term"->"Term"'*'"Unary"
+"Term"->"Term"'/'"Unary"
+    {
+        # 继承属性
+        Term1.start = Term.start
+        # 综合属性
+        Unary.start = Term1.start + len(Term1.codelist)
+        # 综合属性
+        Term.val = new_val
+        Term.type = res_type(Term1.type, Unary.type)
+        Term.codelist = Term1.codelist + Unary.codelist + Code(*//, Term1.val, Unary.val, Term.val)
+        Term.level = new_level
+        Term.index = new_index
+    }
+"Term"->"Unary"
+    {
+        # 继承属性
+        Unary.start = Term.start
+        # 综合属性
+        Term.codelist = Unary.codelist
+        Term.val = Unary.val
+        Term.type = Unary.type
+        Term.level = Unary.level
+        Term.index = Unary.index
+    }
+"Unary"->'!'"Unary"
+"Unary"->'-'"Unary"
+    {
+        # 继承属性
+        Unary1.start = Unary.start 
+        # 综合属性
+        Unary.val = new_val
+        Unary.type = res_type_1(Unary1.type)
+        Unary.codelist = Unary1.codelist + Code(!/-, Unary1.val, _, Unary.val)
+        Unary.level = new_level
+        Unary.index = new_index
+    }
+"Unary"->"Factor"
+    {
+        # 继承属性
+        Factor.start = Unary.start
+        # 综合属性
+        Unary.codelist = Factor.codelist
+        Unary.val = Factor.val
+        Unary.type = Factor.type
+        Unary.level = Factor.level
+        Unary.index = Factor.index
+    }
+"Factor"->'('"Bool"')'
+    {
+        # 继承属性
+        Bool.start = Factor.start
+        Bool.control = Factor.control
+        # 综合属性
+        Factor.codelist = Bool.codelist
+        Factor.val = Bool.val
+        Factor.type = Bool.type
+        Factor.level = Bool.level
+        Factor.index = Bool.index
+    }
+"Factor"->"Loc"
+"Factor"->'constant'
+"Factor"->'true'
+"Factor"->'false'
+    {
+        # 综合属性
+        Factor.val = Loc.val || constant.val || 'true' || 'false' 
+        Factor.type = 'float' || 'bool'
+        Factor.level = (Loc || constant || true || false).level
+        Factor.index = (Loc || constant || true || false).index
+    }
