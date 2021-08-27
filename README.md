@@ -19,3 +19,26 @@
 * log/sym_table_log.txt可查看符号表日志
 
 * log/syntax_tree_log.txt可查看语法树日志
+---
+# Simple Compiler Front-end
+Sun Tong, Nanjing University of Science and Technology
+
+This project includes **lexical analysis**, **syntax analysis** and **semantic analysis**.
+## Environment
+* `python 3.8`
+## Code Structure
+- `data_structure`: contains some required data structure(such as Token, etc)
+- `error`: contains some error that may occur(such as Undefined Identifier, etc)
+- `lex_rules`: contains Type-3 grammar for lexical analysis(in .txt files)
+- `log`: contains debugging files(such as Syntax Tree's visualization, etc)
+- `syntax_rules`: contains Type-2 grammar for syntax analysis(in .txt file)
+- `FA.py`: contains code for Finite Automata(for lexical analysis)
+- `action_goto.json`: contains action_goto table(for syntax analysis)
+- `code.txt`: contains test code for analysis
+- `lexer.py`: contains code for lexical analysis
+- `my_parser.py`: contains code for syntax analysis
+- `read.py`: contains code for parsing the .txt file
+- `semantic.py`: contains code for semantic analysis
+- `symbol_table.py`: contains code for symbol table
+- `syntax.py`: contains code for Abstract Syntax Tree(AST)'s Node
+- `main.py`: an example
